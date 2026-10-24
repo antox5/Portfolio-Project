@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anto Rafin - Computer Science Engineer | Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF5722',
+                        brandOrangeLight: '#FF7043',
+                        brandBlack: '#080808',
+                        brandCardBg: '#121212',
+                        brandBorder: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #080808;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Orange Gradient Text Effect */
+        .text-gradient {
+            background: linear-gradient(135deg, #FF5722 0%, #FF8A65 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Orange Gradient Accent Line */
+        .gradient-line {
+            height: 2px;
+            background: linear-gradient(90deg, #FF5722 0%, #FF8A65 50%, rgba(255, 87, 34, 0.1) 100%);
+        }
+
+        /* Gradient Border for Cards */
+        .card-gradient-border {
+
+            position: relative;
+            background: #121212;
+            border: 1px solid #222222;
+            transition: all 0.3s ease;
+        }
+
+        .card-gradient-border:hover {
+            border-color: #FF5722;
+            box-shadow: 0 4px 20px -5px rgba(255, 87, 34, 0.25);
+        }
+
+        /* Printing & PDF Export Optimization (@media print) */
+        @media print {
+            body {
+                background-color: #FFFFFF !important;
+                color: #000000 !important;
+                font-size: 11pt;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .card-gradient-border {
+                background: #FFFFFF !important;
+                border: 1px solid #DDDDDD !important;
+                box-shadow: none !important;
+                color: #000000 !important;
+            }
+            .text-gradient {
+                background: none !important;
+                -webkit-text-fill-color: #000000 !important;
+                color: #000000 !important;
+                font-weight: bold;
+            }
+            .text-gray-300, .text-gray-400 {
+                color: #333333 !important;
+            }
+            .bg-brandCardBg, .bg-brandBlack {
+                background-color: #FFFFFF !important;
+            }
+            .text-white {
+                color: #000000 !important;
+            }
+            a {
+                text-decoration: underline;
+                color: #000000 !important;
+            }
+            .border-brandBorder {
+                border-color: #EEEEEE !important;
+            }
+            .tech-badge {
+                border: 1px solid #999999 !important;
+                color: #000000 !important;
+                background: #F5F5F5 !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+
+    <!-- TOP CONTROLS / NO PRINT BUTTON -->
+    <div class="flex justify-between items-center mb-8 no-print">
+        <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-brandOrange animate-pulse"></span>
+            <span class="text-xs font-semibold tracking-wider uppercase text-gray-400">Available for Opportunities</span>
+        </div>
+        <button onclick="window.print()" class="flex items-center space-x-2 bg-gradient-to-r from-brandOrange to-brandOrangeLight text-black font-bold px-5 py-2.5 rounded-lg hover:opacity-90 transition-all shadow-lg hover:shadow-brandOrange/20 cursor-pointer">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span> Download CV </span>
+        </button>
+    </div>
+
+    <!-- MAIN ATS RESUME WRAPPER -->
+    <main class="space-y-10">
+
+        <!-- HEADER / CONTACT INFO SECTION -->
+        <header class="border-b border-brandBorder pb-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-2">
+                        ANTO <span class="text-gradient">RAFIN</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 font-medium">Computer Science & Engineering Student</p>
+                </div>
+                
+                <!-- ATS Parseable Address Header -->
+                <address class="not-italic text-sm text-gray-400 space-y-1.5 md:text-right">
+                    <div><i class="fa-solid fa-envelope text-brandOrange w-5"></i> antorafin@gmail.com</div>
+                    <div><i class="fa-solid fa-location-dot text-brandOrange w-5"></i> Tamil Nadu, India</div>
+                    <div>
+                        <a href="https://github.com/antox5" target="_blank" class="hover:text-brandOrange transition-colors">
+                            <i class="fa-brands fa-github text-brandOrange w-5"></i> github.com/antox5
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://linkedin.com" target="_blank" class="hover:text-brandOrange transition-colors">
+                            <i class="fa-brands fa-linkedin text-brandOrange w-5"></i> linkedin.com/in/antorafin
+                        </a>
+                    </div>
+                </address>
+            </div>
+        </header>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <section aria-labelledby="summary-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="summary-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">About Summary</h2>
+            </div>
+            <div class="gradient-line mb-4"></div>
+            <p class="text-gray-300 leading-relaxed text-base">
+                Motivated Computer Science and Engineering student at Amrita Vishwa Vidyapeetham with a solid foundation in software development, data structures, and web technologies. Passionate about building performant REST APIs using FastAPI, developing modern frontend web interfaces, and continuously mastering technical workflows.
+            </p>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section aria-labelledby="skills-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="skills-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">Technical Skills</h2>
+            </div>
+            <div class="gradient-line mb-4"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card-gradient-border p-4 rounded-xl">
+                    <h3 class="text-brandOrange font-semibold text-sm mb-2 uppercase tracking-wide">Programming Languages</h3>
+                    <p class="text-gray-300 text-sm">Python, C, Java, Dart, HTML5, CSS3, SQL</p>
+                </div>
+
+                <div class="card-gradient-border p-4 rounded-xl">
+                    <h3 class="text-brandOrange font-semibold text-sm mb-2 uppercase tracking-wide">Frameworks & Libraries</h3>
+                    <p class="text-gray-300 text-sm">FastAPI, Flutter</p>
+                </div>
+
+                <div class="card-gradient-border p-4 rounded-xl">
+                    <h3 class="text-brandOrange font-semibold text-sm mb-2 uppercase tracking-wide">Databases & Tools</h3>
+                    <p class="text-gray-300 text-sm">MongoDB, MySQL, Git, GitHub, Firebase</p>
+                </div>
+
+                <div class="card-gradient-border p-4 rounded-xl">
+                    <h3 class="text-brandOrange font-semibold text-sm mb-2 uppercase tracking-wide">Core Concepts</h3>
+                    <p class="text-gray-300 text-sm">Data Structures & Algorithms, RESTful API Design, OOP, DBMS</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (WITH DIRECT GITHUB LINKS) -->
+        <section aria-labelledby="projects-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="projects-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">Key Projects</h2>
+            </div>
+            <div class="gradient-line mb-4"></div>
+
+            <div class="space-y-4">
+                <!-- Project 1 -->
+                <article class="card-gradient-border p-5 rounded-xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Hotel Bill Management System</h3>
+                        <a href="https://github.com/antox5/hotel_bill_generator" target="_blank" class="no-print inline-flex items-center space-x-2 text-xs font-bold bg-brandOrange text-black px-3 py-1.5 rounded hover:bg-brandOrangeLight transition-colors self-start sm:self-auto">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Code</span>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        A robust, lightweight desktop Point-of-Sale (POS) and billing application built using Python, Tkinter, and SQLite3. Designed for small-to-medium restaurant setups, this system streamlines order processing, automated calculations (including GST), persistent database record-keeping, and zero-cost digital receipt sharing.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">FastAPI</span>
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">Python</span>
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">PostgreSQL</span>
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">JWT</span>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="card-gradient-border p-5 rounded-xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Simple Shop App UI</h3>
+                        <a href="https://github.com/antox5/simple-shopapp-ui" target="_blank" class="no-print inline-flex items-center space-x-2 text-xs font-bold bg-brandOrange text-black px-3 py-1.5 rounded hover:bg-brandOrangeLight transition-colors self-start sm:self-auto">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Code</span>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        A simple, responsive e-commerce web application UI built withFlutter and Dart. Features include product listing, shopping cart functionality, and local storage integration for persistent user sessions.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">Flutter</span>
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">Dart</span>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="card-gradient-border p-5 rounded-xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Habit Tracker</h3>
+                        <a href="https://github.com/antox5/flutter-habit-tracker" target="_blank" class="no-print inline-flex items-center space-x-2 text-xs font-bold bg-brandOrange text-black px-3 py-1.5 rounded hover:bg-brandOrangeLight transition-colors self-start sm:self-auto">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Code</span>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        Developed a minimalist, high-contrast mobile app for tracking daily habits and building positive routines.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">Flutter</span>
+                        <span class="tech-badge text-xs px-2.5 py-1 rounded bg-brandBlack text-gray-300 border border-brandBorder">Dart</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section aria-labelledby="education-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="education-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">Education</h2>
+            </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section aria-labelledby="education-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="education-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">Education</h2>
+            </div>
+            <div class="gradient-line mb-4"></div>
+
+            <article class="card-gradient-border p-5 rounded-xl">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1">
+                    <h3 class="text-lg font-bold text-white">Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
+                    <span class="text-xs font-bold text-brandOrange bg-brandOrange/10 px-2.5 py-1 rounded border border-brandOrange/30">Enrolled</span>
+                </div>
+                <p class="text-gray-300 text-sm font-medium">Amrita Vishwa Vidyapeetham, Nagercoil Campus</p>
+                <p class="text-gray-400 text-xs mt-2">
+                    Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems.
+                </p>
+            </article>
+        </section>
+
+        <!-- CERTIFICATIONS & TRAINING -->
+        <section aria-labelledby="certifications-heading">
+            <div class="flex items-center space-x-3 mb-3">
+                <h2 id="certifications-heading" class="text-xl font-bold uppercase tracking-wider text-gradient">Certifications & Training</h2>
+            </div>
+            <div class="gradient-line mb-4"></div>
+
+            <div class="space-y-3">
+                <!-- Certification 1 -->
+                <div class="card-gradient-border p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-award text-brandOrange"></i>
+                            <strong class="text-white font-semibold">Flutter Development with Dart</strong>
+                            <span class="text-xs text-gray-400">• Udemy</span>
+                        </div>
+                        <p class="text-gray-300 text-xs mt-1">Cross-platform mobile development using Flutter & Dart, integrated with Firebase.</p>
+                    </div>
+                    <a href="https://www.udemy.com/certificate/UC-620f8f21-b889-4aaa-86ca-ab3d7695247a/" target="_blank" rel="noopener noreferrer" class="no-print inline-flex items-center space-x-1.5 text-xs font-bold text-brandOrange hover:text-white border border-brandOrange/40 hover:bg-brandOrange px-3 py-1.5 rounded transition-all self-start sm:self-auto shrink-0">
+                        <span>Verify Credential</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="card-gradient-border p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-award text-brandOrange"></i>
+                            <strong class="text-white font-semibold">Building basic chat application with Flutter</strong>
+                            <span class="text-xs text-gray-400">Udemy</span>
+                        </div>
+                        <p class="text-gray-300 text-xs mt-1">Building a basic chat app with both Flutter and Firebase.</p>
+                    </div>
+                    <a href="https://www.udemy.com/certificate/UC-6126200c-9d56-4073-ae59-527df73f2036/" target="_blank" rel="noopener noreferrer" class="no-print inline-flex items-center space-x-1.5 text-xs font-bold text-brandOrange hover:text-white border border-brandOrange/40 hover:bg-brandOrange px-3 py-1.5 rounded transition-all self-start sm:self-auto shrink-0">
+                        <span>Verify Credential</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Certification 3 -->
+                
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-12 pt-6 border-t border-brandBorder text-center text-gray-500 text-xs no-print">
+        <p>© Anto Rafin </p>
+    </footer>
+
+</body>
+</html>
