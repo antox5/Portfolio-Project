@@ -355,6 +355,22 @@
     <footer class="mt-12 pt-6 border-t border-brandBorder text-center text-gray-500 text-xs no-print">
         <p>© Anto Rafin </p>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const clickSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3');
+    clickSound.volume = 0.4;
+
+    // Automatically applies to all buttons and links on your site
+    const interactives = document.querySelectorAll('button, a');
+
+    interactives.forEach(el => {
+      el.addEventListener('click', () => {
+        clickSound.currentTime = 0; // Rewind to start for quick repeated clicks
+        clickSound.play().catch(() => {});
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
